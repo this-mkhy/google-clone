@@ -7,7 +7,7 @@ const baseUrl = 'https://google-search3.p.rapidapi.com/api/v1';
 export const ResultContextProvider = ({ children }) => {
   const [results, setResults] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('zamalek');
+  const [searchTerm, setSearchTerm] = useState('frontend developer');
 
   // to make complete request
   // urlType => /videos, /search, /images
@@ -19,7 +19,6 @@ export const ResultContextProvider = ({ children }) => {
       method: 'GET',
       headers: {
         'X-User-Agent': 'desktop',
-        'X-Proxy-Location': 'EU',
         'X-RapidAPI-Host': 'google-search3.p.rapidapi.com',
         'X-RapidAPI-Key': '1169651f57msh618d75a65128dfap1767bbjsnd606012fe114'
       },

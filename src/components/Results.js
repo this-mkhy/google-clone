@@ -6,7 +6,6 @@ import { useResultContext } from '../contexts/ResultContextProvider';
 import { Loading } from './Loading';
  
 export const Results = () => {
-  // rename entries as news
   const { results, isLoading, getResults, searchTerm } = useResultContext();
 
   // images, news, videos
@@ -77,7 +76,8 @@ export const Results = () => {
             <div key={index} className="p-2">
               {/* {console.log(video)} */}
               {/* {console.log(video.additional_links?.[0].href)} */}
-              <ReactPlayer url={video.additional_links?.[0].href} controls width="355px" height="200px" />
+              {video?.additional_links?.[0]?.href && 
+                <ReactPlayer url={video.additional_links?.[0].href} controls width="355px" height="200px" />}
             </div>
           ))}
         </div>
